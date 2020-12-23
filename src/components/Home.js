@@ -1,7 +1,8 @@
-import React from "react";
-import axios from "axios";
+import React from "react"
+import axios from "axios"
 import {Link} from "react-router-dom"
-import Spinner from "./Spinner";
+import Spinner from "./Spinner"
+import ModalCom from "./ModalCom";
 
 const Home = () => {
 
@@ -20,8 +21,9 @@ const Home = () => {
           <div key={post.id} className="card m-1 shadow-lg d-flex justify-content-between flex-row">
             <Spinner />
             <div className="card-body">
-                <Link to={`/${post.id}`} className="card-title">{post.title}</Link>
+                <Link to={`/posts/${post.id}`} className="card-title">{post.title}</Link>
                 <p>{post.body}</p>
+                <ModalCom />
             </div>
           </div>
       ))

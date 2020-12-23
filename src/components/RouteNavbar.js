@@ -14,9 +14,6 @@ import { Link, withRouter } from "react-router-dom";
 
 const RouteNavbar = () => {
 
-  // setTimeout(() => {
-  //   history.push("/about")
-  // }, 10000);
   
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +27,7 @@ const RouteNavbar = () => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="p-0">
-          <Nav className="mr-auto" navbar className="p-0">
+          <Nav className="mr-auto" navbar >
             <NavItem>
               <NavLink>
                 <Link to="/">Components</Link>
