@@ -14,7 +14,7 @@ const TodoApp = () => {
     const todolist = todos.filter(todo => {
         return todo.id !== id
     })
-    setTodo(todolist)
+    setTodo(todolist)  
   };
 
   const addTodo = (todo) => {

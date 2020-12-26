@@ -1,29 +1,32 @@
-import React from 'react'
+import React from "react";
 
-const AddTodos = ({addTodo}) => {
-    const [content, setContent] = React.useState({
-        text:''
-    })
+const AddTodos = ({ addTodo }) => {
+  const [content, setContent] = React.useState({
+    text: '',
+  });
 
-    const handleChange = (e) => setContent({...content, [e.target.name]: e.target.value})
+  const { text } = content
 
-    const handleSubmit = (e) => {
-         e.preventDefault()
-         setContent(...content,'')
-         addTodo('')
-        console.log(content)
-    }
+  const handleChange = (e) => {
+      const {name,value} = e.target
+    setContent({ ...content, [name]: value });
+  };
 
-    const {text} =content
-    
-    return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label >Add new todos: </label>
-                <input type="text" name="text" value={text} onChange={handleChange} />
-            </form>
-        </div>
-    )
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setContent('')
+    addTodo('')
+    // console.log(content);
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit} className="mt-3">
+        <label className="block">Add new todos: </label>{' '}
+        <input type="text" name="text" value={text} onChange={handleChange} />
+      </form>
+    </div>
+  )
 }
 
-export default AddTodos
+export default AddTodos;

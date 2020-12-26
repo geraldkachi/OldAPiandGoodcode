@@ -5,9 +5,10 @@ const Rainbow = (WrappedComponent) => {
     "primary",
     "secondary",
     "warning",
-    "white",
+    "danger",
     "dark",
     "success",
+    "info"
   ];
   const randomColor = colors[Math.floor(Math.random() *5)];
   const className =  "text-"  + randomColor ;

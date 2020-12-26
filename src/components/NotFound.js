@@ -3,9 +3,9 @@ import Spinner from ".//Spinner"
 
 const NotFound = () => {
     return (
-        <div>
+        <div className="text-center">
             Page not found...
-            <div className="mt-5 align-items-center">
+            <div className=" vh-100">
                 <Spinner />
             </div>
         </div>

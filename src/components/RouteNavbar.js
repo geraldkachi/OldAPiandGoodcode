@@ -27,7 +27,7 @@ const RouteNavbar = () => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="p-0">
-          <Nav className="mr-auto" navbar>
+          <Nav className="m-auto" navbar>
             <NavItem>
               <NavLink>
                 <Link to="/">Components</Link>
@@ -50,7 +50,9 @@ const RouteNavbar = () => {
             </NavItem>
           </Nav>
 
-          <Listu>
+          
+        <Nav className="mr-auto float-right">
+        <Listu>
             <Listli>
               <RouterLink to="signin">signIn</RouterLink>
             </Listli>
@@ -58,7 +60,7 @@ const RouteNavbar = () => {
               <RouterLink to="signup">signUp</RouterLink>
             </Listli>
           </Listu>
-          <NavbarText>Simple Text</NavbarText>
+        </Nav>
         </Collapse>
       </Navbar>
     </div>
@@ -70,7 +72,7 @@ const Listu = styled.ul`
       list-style: none;
       display: flex;
       // flex-direction: row;
-      padding: 0 15px;
+      padding: 5px 15px;
       justify-content: between;
 `
 const Listli = styled.li`
