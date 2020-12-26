@@ -32,7 +32,8 @@ const SignIn = () => {
                     <FormGroup>
                         <Label for="examplePassword">Password</Label>
                         <Input type="password" name="password" value={password} placeholder="password" onChange={handleChange} />
-                    </FormGroup>
+                    </FormGroup> 
+                    <Input type="switch" />
                     <Button type="submit" className="btn-block btn-success">Press Me Jor</Button>
                 </Form>
             </div>

@@ -50,6 +50,10 @@ const SignUp = () => {
                         <Input type="password" name="confirm_password" value={confirm_password} placeholder="confirm password" onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
+                        <Label for="exampleText">Text Area</Label>
+                        <Input type="textarea" name="text" id="exampleText" onChange={handleChange}  />
+                    </FormGroup>
+                    <FormGroup>
                         <Label for="exampleSelect">Select</Label>
                         <Input type="select" name="select" id="exampleSelect">
                         <option>1</option>
@@ -59,6 +63,7 @@ const SignUp = () => {
                         <option>5</option>
                         </Input>
                     </FormGroup> 
+                    <Input type="switch" />
                     <Button type="submit" className="btn-block btn-success">Press Me Jor</Button>
                 </Form>
             </div>

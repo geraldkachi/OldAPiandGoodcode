@@ -5,7 +5,7 @@ import Spinner from "./Spinner";
 import ModalCom from "./ModalCom";
 import "../App.css";
 import { IoAdd, IoAccessibility } from "react-icons/io5";
-import RouteNavbar from '../components/RouteNavbar'
+// import RouteNavbar from '../components/RouteNavbar'
 
 import styled from "styled-components";
 
@@ -44,10 +44,13 @@ const Home = ({posts}) => {
 
   return (
     <div>
-        <RouteNavbar />
+        {/* <RouteNavbar /> */}
       <div className="container mt-5">
       <Text className="text-center">Home</Text>
       {postList}       
+      <div>
+        <Link to="/typeinput" >TypeInputAll</Link>
+      </div>
       <div className="float">
         <div className="my-float text-center">
           <IoAdd />
