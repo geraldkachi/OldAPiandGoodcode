@@ -5,6 +5,10 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Post from "./components/Post";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import NotFound from "./components/NotFound";
+
 import "./App.css";
 
 const App = () => {
@@ -13,9 +17,12 @@ const App = () => {
       <RouteNavbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exaxt path="/about" component={About} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
-        <Route path="/posts/:post_id" component={Post} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/posts/:post_id" component={Post} />
+        <Route component={NotFound} />
       </Switch>
     </>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import TodoApp from './todo/TodoApp'
-// import Rainbow from "../hoc/Rainbow"
+import Rainbow from "../hoc/Rainbow"
 
 
 const About = () => {
@@ -16,4 +16,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Rainbow(About)

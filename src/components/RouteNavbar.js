@@ -10,24 +10,24 @@ import {
   NavbarText,
 } from "reactstrap";
 
+import styled from "styled-components"
+
 import { Link, withRouter } from "react-router-dom";
 
 const RouteNavbar = () => {
-
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="py-0 my-0">
-      <Navbar color="dark" light expand="sm" className="p-0">
+    <div className="">
+      <Navbar color="dark" light expand="sm" className="">
         <NavbarBrand>
           <Link to="/">Navbar-Logo</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="p-0">
-          <Nav className="mr-auto" navbar >
+          <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink>
                 <Link to="/">Components</Link>
@@ -49,12 +49,37 @@ const RouteNavbar = () => {
               </NavLink>
             </NavItem>
           </Nav>
+
+          <Listu>
+            <Listli>
+              <RouterLink to="signin">signIn</RouterLink>
+            </Listli>
+            <Listli>
+              <RouterLink to="signup">signUp</RouterLink>
+            </Listli>
+          </Listu>
           <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
 };
+
+const Listu = styled.ul`
+      margin: 0;
+      list-style: none;
+      display: flex;
+      // flex-direction: row;
+      padding: 0 15px;
+      justify-content: between;
+`
+const Listli = styled.li`
+      padding: 0 15px;
+`
+const RouterLink = styled(Link)`
+    text-underline: none; 
+      color: white;
+`
 
 // Navbar.propTypes = {
 //   light: PropTypes.bool,

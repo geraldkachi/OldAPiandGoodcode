@@ -5,7 +5,7 @@ const Contact = ({history}) => {
 
     setTimeout(() => {
         history.push("/about")
-    }, 2000);
+    }, 7000);
 
     return (
         <div className="container mt-5">

@@ -14,14 +14,7 @@ const ModalCom = (props) => {
   return (
     <div>
       <Button color="danger" onClick={toggle}>Press Modal</Button>
-
-
       <Modal size="xs" isOpen={modal} toggle={toggle} className="bd-dark">
-      <div className="modal-header d-flex justify-content-between" toggle={toggle} >
-        <h6></h6>
-        <h5 className="modal-title text-center">Modal title</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
         <ModalHeader toggle={toggle} className="text-center">Modal</ModalHeader>
         <ModalBody className="bd-dark">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

@@ -1,23 +1,25 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
 import ModalCom from "./ModalCom";
-import '../App.css'
-import { IoAdd,IoAccessibility } from "react-icons/io5";
+import "../App.css";
+import { IoAdd, IoAccessibility } from "react-icons/io5";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
-const Home = () => {
-  const [posts, setPost] = React.useState([]);
+import { connect } from "react-redux";
+
+const Home = ({posts}) => {
+  // const [posts, setPost] = React.useState([]);
 
   // ?_limit=5
 
-  React.useEffect(() => {
-    axios(`https://jsonplaceholder.typicode.com/posts`)
-      .then((res) => setPost(res.data.slice(0, 10)))
-      .catch((err) => console.error(err));
-  }, []);
+  // React.useEffect(() => {
+  //   axios(`https://jsonplaceholder.typicode.com/posts`)
+  //     .then((res) => setPost(res.data.slice(0, 10)))
+  //     .catch((err) => console.error(err));
+  // }, []);
 
   const postList = posts.length ? (
     posts.map((post) => (
@@ -39,28 +41,29 @@ const Home = () => {
     <div className="text-center">No post yet... </div>
   );
 
-
   return (
     <div className="container mt-5">
       <Text className="text-center">Home</Text>
-      {postList}
-             
-      <div  className="float">
+      {postList}       
+      <div className="float">
         <div className="my-float text-center">
-        <IoAdd />
-        <IoAccessibility />
+          <IoAdd />
+          <IoAccessibility />
         </div>
       </div>
-      
     </div>
   );
 };
 
 const Text = styled.h4`
-    font-size: 32px;
-    color: red;
-`
+  font-size: 32px;
+  color: red;
+`;
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts,
+  };
+};
 
-
+export default connect(mapStateToProps)(Home);
