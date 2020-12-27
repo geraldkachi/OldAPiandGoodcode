@@ -9,9 +9,10 @@ const SignUp = () => {
         email:'',
         password:'',
         confirm_password:'',
+        select: ''
     })
 
-    const {firstname, lastname, email, password, confirm_password} = forminput
+    const {firstname, lastname, email, password, confirm_password, textarea, select} = forminput
 
     const handleChange = e => {
         const {name, value} = e.target
@@ -19,12 +20,9 @@ const SignUp = () => {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(forminput);
-        // const data = {
-
-        // }
-
+        console.log(forminput)
     }
+    
     return (
         <>
             <div className="container">
@@ -51,11 +49,11 @@ const SignUp = () => {
                     </FormGroup>
                     <FormGroup>
                         <Label for="exampleText">Text Area</Label>
-                        <Input type="textarea" name="text" id="exampleText" onChange={handleChange}  />
+                        <Input type="textarea" name="textarea" value={textarea} id="exampleText" onChange={handleChange}  />
                     </FormGroup>
                     <FormGroup>
                         <Label for="exampleSelect">Select</Label>
-                        <Input type="select" name="select" id="exampleSelect">
+                        <Input type="select" name="select" value={select} id="exampleSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
