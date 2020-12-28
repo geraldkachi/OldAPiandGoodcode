@@ -5,6 +5,10 @@ const ItemDetail = ({match}) => {
     
     const [item , setItem] = useState([])
     
+    useEffect(() => {
+        fakeAPiid()
+    }, [])
+    
     const fakeAPiid = async () => {
         await axios(`https://jsonplaceholder.typicode.com/posts/1?${match.params.id}`)
         .then(res => setItem(res.data))
@@ -13,12 +17,6 @@ const ItemDetail = ({match}) => {
         // const item = await FakeAPiid.res.data()
     }
     
-    useEffect(() => {
-        fakeAPiid()
-    }, [])
-
-    
-
     return (
         <div key={item.id}>
             <div>{item.title}</div>
