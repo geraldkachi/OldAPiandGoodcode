@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, FormGroup, Label, Input ,Button} from 'reactstrap';
+import axios from "axios"
 
 const SignUp = () => {
 
@@ -9,18 +10,36 @@ const SignUp = () => {
         email:'',
         password:'',
         confirm_password:'',
-        select: ''
+        textarea: '',
+        select: '',
+        type:'one'
     })
 
-    const {firstname, lastname, email, password, confirm_password, textarea, select} = forminput
+    const {firstname, lastname, email, password, confirm_password, textarea, select, type} = forminput
 
     const handleChange = e => {
         const {name, value} = e.target
         setForminput({...forminput, [name]:value })
     }
+    
     const handleSubmit = e => {
         e.preventDefault()
         console.log(forminput)
+        setForminput({
+            firstname:'',
+            lastname:'',
+            email:'',
+            password:'',
+            confirm_password:'',
+            textarea: '',
+            select: '',
+            type:'one'
+
+        })
+
+        axios.post(`http://localhost:8000/signup`, forminput)
+        .then(res => console.log(res.data))
+        .catch(err => console.error(err))
     }
     
     return (
@@ -41,11 +60,11 @@ const SignUp = () => {
                     </FormGroup>
                     <FormGroup>
                         <Label for="examplePassword">Password</Label>
-                        <Input type="password" name="password" value={password} placeholder="password" onChange={handleChange} />
+                        <Input type="password" name="password" value={password} placeholder="password" minLength='6' onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="examplePassword">Confirm Password</Label>
-                        <Input type="password" name="confirm_password" value={confirm_password} placeholder="confirm password" onChange={handleChange} />
+                        <Input type="password" name="confirm_password" value={confirm_password} placeholder="confirm password" minLength='6' onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="exampleText">Text Area</Label>
@@ -61,7 +80,10 @@ const SignUp = () => {
                         <option>5</option>
                         </Input>
                     </FormGroup> 
-                    <Input type="switch" />
+                    {/* the name is the type */}
+                    <input type="radio" name="type" value={"one"} checked={type === 'one'} onChange={handleChange}  /> One {' '}
+                    <input type="radio" name="type" value={"two"} checked={type === 'two'} onChange={handleChange}  /> Two {' '}
+                    <Input type="switch" name='switch' />
                     <Button type="submit" className="btn-block btn-success">Press Me Jor</Button>
                 </Form>
             </div>

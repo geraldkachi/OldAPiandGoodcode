@@ -35,6 +35,28 @@ const TypeInput = () => {
     const handleSubmit = e => {
         e.preventDefault()
         console.log(forminput)
+        setForminput({
+            firstname:'',
+            lastname:'',
+            email:'',
+            password:'',
+            confirm_password:'',
+            url:'',
+            number:'',
+            datetime:'',
+            date:'',
+            time:'',
+            color:{},
+            search:'',
+            select:'',
+            selectMulti:[],
+            textarea:'',
+            file:'',
+            range:'',
+            radio: false,
+            checkbox: false,
+            swtch:''
+        })
     }
 
     return (

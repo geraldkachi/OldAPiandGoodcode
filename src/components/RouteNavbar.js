@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText,
+  // NavbarText,
 } from "reactstrap";
 
 import styled from "styled-components"
@@ -26,8 +26,8 @@ const RouteNavbar = () => {
           <Link to="/">Navbar-Logo</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar className="p-0">
-          <Nav className="m-auto" navbar>
+        <Collapse isOpen={isOpen} navbar className="">
+          <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink>
                 <Link to="/">Components</Link>

@@ -71,9 +71,9 @@ class App extends React.Component {
        text:'',
 
        ninjas:[
-          {id:"1",name:"kachi", age:"25",belt:"black"},
-          {id:"2",name:"kachi", age:"20",belt:"green"},
-          {id:"3",name:"kachi", age:"305",belt:"pink"}
+          {id:"1",name:"kachi", age:"25", belt:"black"},
+          {id:"2",name:"kachi", age:"20", belt:"green"},
+          {id:"3",name:"kachi", age:"305", belt:"pink"}
        ]
     }
   }
