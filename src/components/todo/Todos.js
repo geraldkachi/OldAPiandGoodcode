@@ -5,7 +5,7 @@ const Todos = ({todos, deleteTodo}) => {
     const todoList = todos.length ? (
         todos.map(todo => (
                 <div key={todo.id} className="list-group">
-                    <div  onClick={()=> {deleteTodo(todo.id)}} className="list-group-item">
+                    <div  onClick={()=> deleteTodo(todo.id)} className="list-group-item">
                         {todo.content}
                     </div>
                 </div>

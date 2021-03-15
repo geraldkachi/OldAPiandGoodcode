@@ -1,5 +1,7 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch,
+  //  Redirect 
+  } from "react-router-dom";
 import RouteNavbar from "./components/RouteNavbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -24,7 +26,9 @@ const App = () => {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/posts/:post_id" component={Post} />
         <Route exact path="/typeinput" component={TypeInput} />
-        <Route component={NotFound} />
+        {/* <Route component={NotFound} />
+        <Redirect path="/NotFound" /> */}
+        <Route path="*" component={NotFound} />
       </Switch>
     </>
   );

@@ -19,8 +19,12 @@ const TodoApp = () => {
 
   const addTodo = (todo) => {
     todo.id = Math.random()
-    let todosAd = [...todos, todo]
-    setTodo(todosAd)
+    // this brings a new set of todos but the problem is how to update it when its a const 
+    let todosAdd = [...todos, todo]
+    setTodo(todosAdd)
+    // setTodo({
+    //   todosAd
+    // })
   }
 
   return (

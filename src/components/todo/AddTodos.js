@@ -14,8 +14,10 @@ const AddTodos = ({ addTodo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setContent('')
-    addTodo('')
+    setContent({
+      text:''
+    })
+    addTodo(content)
     // console.log(content);
   };
 
