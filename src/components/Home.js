@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 // import axios from "axios";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
@@ -72,5 +73,9 @@ const mapStateToProps = (state) => {
     posts: state.posts,
   };
 };
+
+Home.propTypes = {
+  posts: PropTypes.array.isRequired,
+}
 
 export default connect(mapStateToProps)(Home);
