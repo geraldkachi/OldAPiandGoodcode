@@ -31,9 +31,7 @@ const Home = ({posts}) => {
       >
         <Spinner />
         <div className="card-body">
-          <Link to={`/posts/${post.id}`} className="card-title">
-            {post.title}
-          </Link>
+          <Link to={`/posts/${post.id}`} className="card-title">{post.title}</Link>
           <p>{post.body}</p>
           <ModalCom />
         </div>
@@ -49,14 +47,16 @@ const Home = ({posts}) => {
       <div className="container mt-5">
       <Text className="text-center">Home</Text>
       {postList}       
-      <div>
-        <Link to="/typeinput" >TypeInputAll</Link>
-      </div>
       <div className="float">
         <div className="my-float text-center">
           <IoAdd />
           <IoAccessibility />
         </div>
+      </div>
+      <div className="d-flex justify-content-between text-center py-5">
+      <Link to="typeinput">TypeInput</Link>
+      <Link to="formik">Formik</Link>
+      <Link to="react-hook-form">React Hook Form</Link>
       </div>
     </div>
     </div>
@@ -78,4 +78,4 @@ Home.propTypes = {
   posts: PropTypes.array.isRequired,
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Home)

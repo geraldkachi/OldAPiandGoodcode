@@ -1,33 +1,18 @@
-import axios from 'axios';
+
 import React from 'react'
 import { Form, FormGroup, Label, Input ,Button} from 'reactstrap';
+import UseForm from './useForm/UseForm';
+
 
 const SignIn = () => {
 
-    const [forminput,setForminput] = React.useState({
-        email:'',
-        password:'',
-    })
+   const { forminput, handleChange, handleSubmit } = UseForm()
 
     const { email, password} = forminput
 
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log(forminput);
-        setForminput({
-            email:'',
-            password:'',
-        })
-
-        axios.post(`http://localhost:8000/sigin`, forminput)
-        .then(res => console.log(res.data))
-        .catch(err => console.error(err))
-    }
-
-    const handleChange = e => {
-        const {name, value} = e.target
-        setForminput({...forminput, [name]:value })
-    }
+   function submit() {
+       console.log('submit succesfully')
+   }
 
     return (
         <>

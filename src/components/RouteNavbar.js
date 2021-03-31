@@ -47,6 +47,9 @@ const RouteNavbar = () => {
               <NavLink>
                 <Link to="/contact">Contact</Link>
               </NavLink>
+              <NavLink>
+                <Link to="/customreacthook">HookFormWith Logic</Link>
+              </NavLink>
             </NavItem>
           </Nav>
 
