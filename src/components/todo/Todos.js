@@ -13,7 +13,7 @@ const Todos = ({todos, deleteTodo}) => {
             )
         )
     ) : (
-        <div>No damn todos here...</div>
+        <div>loading todos here...</div>
     )
 
     return (

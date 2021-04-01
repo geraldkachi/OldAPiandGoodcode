@@ -16,14 +16,14 @@ const ReactHookForm = () => {
     const {register, handleSubmit, errors} = useForm({
         mode: 'onBlur',
 
-        validationSchema: Yup.object().shape({
+        validationSchema: Yup.object({
             // email: Yup.string().max(10, 'Email must be shorter than 10 charaters').required('Required'),
             // email: Yup.string().max(10, 'Email must be shorter than 10 charaters').required(),
             email: Yup.string().email('Invalid email').required('Required'),
             password: Yup.string().min(8, 'Password should be longer than 8 characters').required("Required"),
       
-            firstname: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
-            lastname: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
+            firstname: Yup.string().min(2, 'Too Short!').max(10, 'Too Long!').required('Required'),
+            lastname: Yup.string().min(2, 'Too Short!').max(10, 'Too Long!').required('Required'),
           })
     })
 
@@ -43,7 +43,7 @@ const ReactHookForm = () => {
             <Label htmlFor="email">Email</Label>
             <Input ref={register} placeholder="Email" id="email" type="email" name="email" />
             </FormGroup>
-            {errors.email && <div>{errors.email}</div>}
+            {errors.email && <div>{errors.email.message}</div>}
             {/* {errors.email && <div>this is required</div>} */}
 
 
@@ -51,21 +51,21 @@ const ReactHookForm = () => {
             <Label htmlFor="firstname">FirstName</Label>
             <Input ref={register} placeholder="Firstname" id="firstname" type="text" name="firstname" />
             </FormGroup>
-            {errors.firstname && <div>{errors.firstname}</div>}
+            {errors.firstname && <div>{errors.firstname.message}</div>}
 
 
           <FormGroup>
             <Label htmlFor="lastname">Lastname</Label>
             <Input ref={register} placeholder="lastname" id="lastname" type="text" name="lastname" />
             </FormGroup>
-            {errors.lastname && <div>{errors.lastname}</div>}
+            {errors.lastname && <div>{errors.lastname.message}</div>}
 
 
           <FormGroup>
             <Label htmlFor="passsword">Email</Label>
             <Input ref={register} placeholder="password" id="password" type="password" name="password" />
             </FormGroup>
-            {errors.password && <div>{errors.password}</div>}
+            {errors.password && <div>{errors.password.message}</div>}
 
             <Button className="btn text-center">Button</Button>
         </form>

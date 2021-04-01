@@ -23,6 +23,10 @@ const Home = ({posts}) => {
   //     .catch((err) => console.error(err));
   // }, []);
 
+  // fetch
+
+  
+
   const postList = posts.length ? (
     posts.map((post) => (
       <div
