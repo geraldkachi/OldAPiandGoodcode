@@ -1,4 +1,5 @@
 import React, {useState , useEffect} from "react";
+import axios from "axios"
 
 const CountriesApi = () => {
   const [countries, setCountries] = useState([]);
@@ -6,14 +7,12 @@ const CountriesApi = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    ListoFPersons();
     ListofCountries();
-    loadData();
   }, []);
 
   
   const ListofCountries = async () => {
-    await axios("https://restcountries.eu/rest/v2/aa")
+    await axios("https://restcountries.eu/rest/v2/all")
       .then((res) => setCountries(res.data))
       .catch((err) => console.log(err));
   };

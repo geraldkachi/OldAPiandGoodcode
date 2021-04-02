@@ -11,6 +11,9 @@ import { IoAdd, IoAccessibility } from "react-icons/io5";
 import styled from "styled-components";
 
 import { connect } from "react-redux";
+import CountriesApi from "./axios/CountriesApi";
+import FetchComponets from "./axios/FetchComponets";
+import ApiComponent from "./axios/ApiComponent";
 
 const Home = ({posts}) => {
   // const [posts, setPost] = React.useState([]);
@@ -25,7 +28,7 @@ const Home = ({posts}) => {
 
   // fetch
 
-  
+
 
   const postList = posts.length ? (
     posts.map((post) => (
@@ -63,6 +66,9 @@ const Home = ({posts}) => {
       <Link to="react-hook-form">React Hook Form</Link>
       </div>
     </div>
+    {/* <CountriesApi /> */}
+    {/* <FetchComponets /> */}
+    <ApiComponent />
     </div>
   );
 };
