@@ -31,3 +31,27 @@ const ApiComponent = () => {
 };
 
 export default ApiComponent;
+
+
+// brad
+
+  // const [setState] = useState([])
+
+  // const getTodos = () => {
+  // axios({
+  //     method: 'get',
+  //     url: 'https//jsonplaceholder.typicode.com/todos',
+  //     params: {
+  //         _limit: 5
+  //     }
+  // })
+  // .then( res => setState(res.data))
+  // .catch( err => setState(err))
+
+  // OR
+
+  //     axios(`https//jsonplaceholder.typicode.com/todos?_limit=5`)
+  //     .then( res => setState(res.data))
+  //     .catch( err => setState(err))
+  //     console.log(getTodos);
+  // }

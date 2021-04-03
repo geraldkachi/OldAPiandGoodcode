@@ -39,7 +39,7 @@ const AndreFetch = () => {
   };
 
 //   ////////////////////////////////////////////
-
+// try this out =>  swapi.co
 
 // andre way 
 
@@ -67,3 +67,25 @@ try {
 
 export default AndreFetch;
 
+// brad
+
+  // const [setState] = useState([])
+
+  // const getTodos = () => {
+  // axios({
+  //     method: 'get',
+  //     url: 'https//jsonplaceholder.typicode.com/todos',
+  //     params: {
+  //         _limit: 5
+  //     }
+  // })
+  // .then( res => setState(res))
+  // .catch( err => setState(err))
+
+  // OR
+
+  //     axios(`https//jsonplaceholder.typicode.com/todos?_limit=5`)
+  //     .then( res => setState(res))
+  //     .catch( err => setState(err))
+  //     console.log(getTodos);
+  // }
