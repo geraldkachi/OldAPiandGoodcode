@@ -43,6 +43,17 @@ const App = () => {
 
 export default App;
 
+// https://cssgradient.io/     https://getwaves.io/   https://bennettfeely.com/clippy/
+
+//  from a site
+// axios.all([
+//   axios.get('https://api.github.com/users/hacktivist123'),
+//   axios.get('https://api.github.com/users/adenekan41')
+// ])
+// .then(response => {
+//   console.log('Date created: ', response[0].data.created_at);
+//   console.log('Date created: ', response[1].data.created_at);
+// });
 
 // axios([
 //   axios.get(`https:jsonplaceholder.typicode.com/todos`),
