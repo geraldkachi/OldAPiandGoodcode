@@ -11,9 +11,9 @@ import { IoAdd, IoAccessibility } from "react-icons/io5";
 import styled from "styled-components";
 
 import { connect } from "react-redux";
-import CountriesApi from "./axios/CountriesApi";
-import FetchComponets from "./axios/FetchComponets";
-import ApiComponent from "./axios/ApiComponent";
+// import CountriesApi from "./axios.fetch/ApiComponent";
+// import FetchComponets from "./axios.fetch/ApiComponent";
+import ApiComponent from "./axios.fetch/ApiComponent";
 
 const Home = ({posts}) => {
   // const [posts, setPost] = React.useState([]);
@@ -29,8 +29,10 @@ const Home = ({posts}) => {
   // fetch
 
 
+  // eslint-disable-next-line 
 
   const postList = posts.length ? (
+
     posts.map((post) => (
       <div
         key={post.id}

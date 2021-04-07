@@ -19,16 +19,17 @@ const AddTodos = ({ addTodo }) => {
     })
     addTodo(content)
     // console.log(content);
-  };
+  }
 
   return (
     <div>
       <form onSubmit={handleSubmit} className="mt-3">
         <label className="block">Add new todos: </label>{' '}
-        <input type="text" name="text" value={text} onChange={handleChange} />
+        <input type="text" name="text" value={text} onChange={handleChange} required />
       </form>
     </div>
   )
+  
 }
 
 

@@ -7,6 +7,7 @@ const TodoApp = () => {
   const [todos, setTodo] = React.useState([
     { id: 1, content: "buy some milk" },
     { id: 2, content: "play kachi songs" },
+    { id: 3, content: "ikoojo play with kachi" },
   ]);
 
   const deleteTodo = (id) => {
@@ -17,11 +18,13 @@ const TodoApp = () => {
     setTodo(todolist)  
   };
 
-  const addTodo = (todo) => {
-    todo.id = Math.random()
+  const addTodo = (todo, index) => {
     // this brings a new set of todos but the problem is how to update it when its a const 
-    let todosAdd = [...todos, todo]
+    const todosAdd = [...todos, todo]
+    todo.id = Math.random()
+    // todo.id = !todo.id
     setTodo(todosAdd)
+    console.log(todosAdd)
     // setTodo({
     //   todosAd
     // })
